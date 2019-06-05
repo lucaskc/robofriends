@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
+import BouncingLoader from '../components/BouncingLoader';
 import './App.css';
 
 class App extends Component {
@@ -33,7 +34,7 @@ class App extends Component {
 		});
 		
 		if (!robots.length) {
-			return <h1 className='tc'>Loading</h1>
+			return <BouncingLoader/>
 		} else {
 			return (
 				<div className='tc'>
